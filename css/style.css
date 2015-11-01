@@ -1,3 +1,7 @@
+body {
+	margin: 0;
+}
+
 header {
 	background-image: url('../images/caribe.jpg');
 	background-repeat: no-repeat;
@@ -5,15 +9,25 @@ header {
 }
 
 header h1 {
-	font-size: 50pt;
+	font-size: 30pt;
 	color: rgba(255,255,255,0.67);
 	font-weight: bold;
 	text-align: center;
-	margin: 150px 0;
+	margin: 0;
+	padding: 25% 0;
 }
 
-.findme {
-	text-align: center;
+h2 {
+	color: #0976B4;
+}
+
+footer {
+	background-color: #7BB6DE;
+	padding: 10px 0;
+}
+
+.icon {
+	width: 99%;
 }
 
 .icon:hover {
@@ -23,4 +37,28 @@ header h1 {
 #copy {
 	text-align: center;
 }
+
+@media (min-width: 300px){
+
+	.icon {
+		width: 48%;
+	}
+
+}
+
+
+@media (min-width: 500px){
+
+	header h1 {
+		font-size: 50pt;
+		padding: 150px 0;
+	}
+
+	.icon {
+		width: 32%;
+	}
+
+}
+
+
 
