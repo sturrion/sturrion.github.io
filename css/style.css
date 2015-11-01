@@ -27,7 +27,7 @@ footer {
 }
 
 .icon {
-	width: 99%;
+	width: 32%;
 }
 
 .icon:hover {
@@ -38,24 +38,11 @@ footer {
 	text-align: center;
 }
 
-@media (min-width: 600px){
-
-	.icon {
-		width: 48%;
-	}
-
-}
-
-
-@media (min-width: 1000px){
+@media (min-width: 500px){
 
 	header h1 {
 		font-size: 50pt;
 		padding: 150px 0;
-	}
-
-	.icon {
-		width: 32%;
 	}
 
 }
