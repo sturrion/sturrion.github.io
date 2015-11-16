@@ -17,6 +17,11 @@ header h1 {
 	padding: 25% 0;
 }
 
+section:last-of-type {
+	margin-bottom: 100px;
+}
+
+
 h2 {
 	color: #0976B4;
 }
@@ -24,7 +29,7 @@ h2 {
 footer {
 	background-color: #7BB6DE;
 	padding: 10px 0;
-	position: absolute;
+	position: fixed;
 	bottom: 0;
 	width: 100%;
 }
