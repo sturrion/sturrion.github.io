@@ -1,94 +1,175 @@
+/* colors 
+
+/* As hex codes 
+
+.color-primary-0 { color: #109CFF }	 Main Primary color 
+.color-primary-1 { color: #A9DBFF }
+.color-primary-2 { color: #79C7FF }
+.color-primary-3 { color: #00518B }
+.color-primary-4 { color: #003F6B }
+
+.color-complement-0 { color: #FF9000 }	 Main Complement color 
+.color-complement-1 { color: #FFD7A4 }
+.color-complement-2 { color: #FFC170 }
+.color-complement-3 { color: #D97A00 }
+.color-complement-4 { color: #A75E00 }
+
+
+
+ As RGBa codes 
+
+.rgba-primary-0 { color: rgba( 16,156,255,1) }	 Main Primary color 
+.rgba-primary-1 { color: rgba(169,219,255,1) }
+.rgba-primary-2 { color: rgba(121,199,255,1) }
+.rgba-primary-3 { color: rgba(  0, 81,139,1) }
+.rgba-primary-4 { color: rgba(  0, 63,107,1) }
+
+.rgba-complement-0 { color: rgba(255,144,  0,1) }	 Main Complement color 
+.rgba-complement-1 { color: rgba(255,215,164,1) }
+.rgba-complement-2 { color: rgba(255,193,112,1) }
+.rgba-complement-3 { color: rgba(217,122,  0,1) }
+.rgba-complement-4 { color: rgba(167, 94,  0,1) }
+*/
+
+/* general */
 * {
-	margin: 0;
+	margin:0;
+	padding: 0;
 	font-family: Verdana, Geneva, sans-serif;
 }
 
-header {
-	background-image: url('../images/caribe.jpg');
-	background-repeat: no-repeat;
-	background-color: #7BB6DE;
+body {
+	border: 4px solid #00518B;
 }
 
 section {
-	display: inline-block;
-	width: 100%;
+	background: #FFFFFF;
+	margin: 2%;
+	border: 4px solid #00518B;
 }
 
-h2 {
-	color: #0976B4;
-	text-align: center;
-	margin: 2% 4%;
-	padding: 1% 0;
+section:hover {
+	border-color: #FF9000;
 }
 
 p {
-	margin: 0;
+	font-size: 0.9em;
+	margin: 0.5% 2%;
+	text-align: justify;
 }
 
 a {
 	text-decoration: none;
+	color: #00518B;
 }
 
-footer {
-	background-color: #7BB6DE;
-	padding: 10px 0;
+a:hover {
+	color: #FF9000;
+}
+
+/* headers */
+
+h2 {
+	padding: 1% 0;
+    text-align: center;
+    color: #00518B;
+}
+
+#main_header {
+	background-color: #00518B;
 	width: 100%;
+    padding: 50px 0;
 }
 
-header h1 {
+#main_header > h1 {
 	font-size: 50pt;
-	padding: 150px 0;
-	color: rgba(255,255,255,0.67);
+	color: #FFFFFF;
 	font-weight: bold;
 	text-align: center;
-	margin: 0;
-
 }
 
-section:nth-child(odd) {
-    background: #EDF5FB;
+#main_header:hover {
+	background-image: url('../images/caribe.jpg');
+	background-repeat: no-repeat;
 }
 
-section:nth-child(odd) > h2 {
-    background: #FFFFFF;
+#game_header {
+	background-color: #00518B;
+	width: 100%;
+    padding: 25px 0;
 }
 
-section:nth-child(even) > h2 {
-    background: #EDF5FB;
+#game_header > h1 {
+	font-size: 35pt;
+	color: #FFFFFF;
+	font-weight: bold;
+	text-align: center;
 }
 
-section:last-of-type {
-	padding-bottom: 2%;
+/* navs */
+.breadcrumb {
+	display: inline-block;
+	color: #D97A00;
+	margin: 1% 2%;
 }
 
+.breadcrumb li {
+	display: inline-block;
+	padding-right: 5px;
+}
+
+
+
+/* footers */
+
+footer {
+	margin:2%;
+}
+
+#copy {
+	font-size: 0.9em;
+	text-align: center;
+}
+
+/* thumbnail */
 .thumbnail {
 	display: inline-block;
 	width: 30%;
+	margin: 1.25%;
+	text-align: center;
+}
+
+.thumbnail > p {
 	text-align: center;
 }
 
 .thumbnail img {
 	width: 80%;
-	padding: 4%;
-    background-color: #FFFFFF;
-    margin: 2% 6% 6%;
+    border: 8px #00518B outset;
+    border-radius: 10px;
+    padding: 2px;
 }
 
+.thumbnail img:hover {
+    border-color: #FF9000;
+}
+
+.thumbnail img:active {
+    border-style: inset;
+}
+
+/* icons find me */
 .icon {
 	width: 32%;
 }
 
 .icon:hover {
-	fill: #7BB6DE;
+	fill: #FF9000;
 }
 
-#copy {
-	text-align: center;
-}
-
-#copy a {
-	color:#FFFFFF;
-	font-weight: bold;
+/* games */
+.game_section {
+	margin: 0px 2% 1%;
 }
 
 /* for unity games */
@@ -104,7 +185,7 @@ div.broken a, div.missing a {
 	top: -31px;
 }
 div.broken img, div.missing img {
-	border-width: 0px;
+	border-width: 0;
 }
 div.broken {
 	display: none;
@@ -112,46 +193,34 @@ div.broken {
 div#unityPlayer {
 	cursor: default;
 	height: 600px;
-	width: 960px;
+}
+
+div#unityPlayer  embed {
 	margin: 0 auto;
 }
-/* end unity games */		
 
-@media (max-width: 800px) {
+/* end unity games */	
 
-	p {
-		font-size: 95%;
-	}
-
-	header h1 {
-		font-size: 30pt;
-		padding: 25% 0;
-	}
-}
-
+/* small display */
 @media (max-width: 500px) {
-	
-	h2 {
-		font-size: 1em;
-	}
 
 	p {
 		font-size: 0.8em;
 	}
 
+	#main_header > h1 {
+		font-size: 30pt;
+	}
+
 	.thumbnail {
-		width: 100%;
+		width: 80%;
+		margin: 2% 8%;
 	}
-
-	.icon {
-		width: 100%;
-	}
-
-	.thumbnail:nth-child(even) {
-		background: #FFFFFF;
-	}
-
-
 
 }
+
+
+
+
+
 
