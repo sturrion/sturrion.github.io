@@ -117,8 +117,6 @@ h2 {
 	padding-right: 5px;
 }
 
-
-
 /* footers */
 
 footer {
@@ -193,7 +191,6 @@ div#unityPlayer {
 	cursor: default;
 	height: 600px;
 }
-
 div#unityPlayer  embed {
 	margin: 0 auto;
 }
