@@ -9,7 +9,7 @@ body {
 }
 
 header {
-	padding: 80px;
+	padding: 60px;
 }
 
 h1 {
@@ -20,16 +20,35 @@ h1 {
 	text-align: center;
 }
 
+h2 {
+	color: #4F6088;
+	font-variant:small-caps;
+	text-align: center;
+}
+
 div {
 	text-align: center;
 }
 
-.container section {
+img {
+	width: 100px;
+}
+
+a {
+	text-decoration: none;
+	color: #000000;
+}
+
+.container a section {
 	border: 1px solid #E5ECFB;
 	width: 30%;
 	display: inline-table;
 	margin: 0 10px 20px;
 	height: 250px;
+}
+
+.container section:hover {
+	background-color: #E5ECFB;
 }
 
 .title {
@@ -43,8 +62,8 @@ div {
 	list-style-type: none;
 }
 
-img {
-	width: 100px;
+footer {
+	margin-top: 10px;
 }
 
 footer p {
@@ -64,3 +83,28 @@ footer p {
  	fill: #4F6088;
 }
 
+/* for unity games */
+div.broken, div.missing {
+	margin: auto;
+	position: relative;
+	top: 50%;
+	width: 193px;
+}
+div.broken a, div.missing a {
+	height: 63px;
+	position: relative;
+	top: -31px;
+}
+div.broken img, div.missing img {
+	border-width: 0;
+}
+div.broken {
+	display: none;
+}
+div#unityPlayer {
+	cursor: default;
+	height: 600px;
+}
+div#unityPlayer  embed {
+	margin: 0 auto;
+}
